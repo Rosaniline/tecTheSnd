@@ -7,16 +7,16 @@ $(document).ready(function(){
 
 		if ( $(this).hasClass('active') ) {
 			$(this).removeClass('active');
-			$(this).find('img').attr('src', '/images/plus_symbol_grey.png');
+			$(this).find('img').attr('src', 'seed/images/plus_symbol_grey.png');
 			// console.log($(this).find('img').attr('src'));
 		}
 
 		else {
 			$('.panel-div').removeClass('active');
-			$('.panel-div').find('img').attr('src', '/images/plus_symbol_grey.png');
+			$('.panel-div').find('img').attr('src', 'seed/images/plus_symbol_grey.png');
 			$(this).addClass('active');
 			console.log($(this).find('img').attr('src'));
-			$(this).find('img').attr('src', '/images/minus_symbol_grey.png');
+			$(this).find('img').attr('src', 'seed/images/minus_symbol_grey.png');
 		}				
 
 	});

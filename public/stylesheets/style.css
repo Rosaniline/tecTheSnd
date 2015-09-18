@@ -249,14 +249,14 @@ p {
 #banner_fst {
 	height: 100vh;
 	text-align: center;
-	background-image: url('/images/banner1_bg.png');
+	background-image: url('/seed/images/banner1_bg.png');
 	background-repeat: repeat;
 }
 
 #banner_snd {
 	height: 100vh;
 	text-align: center;
-	background-image: url('/images/banner2_bg.png');
+	background-image: url('/seed/images/banner2_bg.png');
 	background-repeat: repeat;
 }
 
