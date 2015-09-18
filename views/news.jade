@@ -1,0 +1,29 @@
+div.row.extra-padding
+	h1 最新消息
+div.row(style='padding-bottom: 5%;')
+	div.col-md-1.col-sm-1.col-xs-1
+	div.col-md-10.col-sm-10.col-xs-10
+		div#accordion.panel-group(role='tablist', aria-multiselectable='true')
+			div.panel.panel-default
+
+				- var i = 0
+				- data.reverse()
+				- for item in data
+
+					div.panel-div(class= i == 0? 'active':'', data-toggle='collapse', data-parent = '#accordion', data-target='#collapse' + i)
+						div.row
+							div.col-md-2.col-xs-12
+								h4.news-title #{item.date}
+							div.col-md-9.col-xs-12
+								h4.news-title #{item.title}
+							div.col-md-1.hidden-xs
+								span.hidden-xs(style='float:right; display: inline-block;')
+									img(src= i == 0?'/seed/images/minus_symbol_grey.png':'/seed/images/plus_symbol_grey.png', style='padding: 10px 10px;')
+					div.panel-content-div.panel-collapse.collapse(class= i == 0?'in':'', role='tabpanel', aria-labelledby='heading' + i, id = 'collapse' + i)
+						div.panel-body.wordwrap
+							p #{item.content}
+
+					- i ++
+
+
+	div.col-md-1.col-sm-1.col-xs-1

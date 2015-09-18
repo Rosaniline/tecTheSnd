@@ -1,0 +1,282 @@
+extends layout
+
+block content
+	//- div(style='height: 130px;')
+	div#div_top.banner_slider
+		div#banner_fst
+			//- img(src='seed/images/banner_reward.png' style='width: 50%;')
+			div.container-fluid#banner
+				div.row.hidden-xs
+					img(src='seed/images/banner1_main2.png' style='align:middle; height:80vh;')
+				.row.hidden-sm.hidden-md.hidden-lg
+					img(src='seed/images/banner1_right2.png' style='align:middle; width:100%;')
+					//- div.col-md-1.hidden-xs
+					//- div.col-md-5.hidden-xs
+					//- 	img(src="images/banner1_left.png" style="width: 100%; margin-right: -17%;")#banner1_left
+					//- div.col-md-6
+					//- 	img(src="images/banner1_right.png")#banner1_right
+
+				//- div.row(style='padding-top: 3%')
+					//- button.btn.rec_btn#btn_more 馬上了解 !
+		div#banner_snd
+			div.container-fluid#banner
+				div.row
+					div.col-md-5.hidden-sm.hidden-xs
+						img(src='seed/images/banner2_left.png' style='height: 65vh; margin-top:-10vh; margin-right:-30%;')
+					div.col-md-6.col-xs-12(style='padding-top: 40px;')
+						img(src='seed/images/banner2_right.png' style='height: 50vh; margin-left: -7%;')
+				.row.hidden-sm.hidden-xs
+					img(src='seed/images/banner2_sub.png' style='height: 20vh; align: middle; margin-top: 2vh')
+
+
+
+	span(itemscope itemtype="http://schema.org/Event")
+		// Fixed navbar
+		nav.navbar.navbar-custom.navbar-fixed-top#navbar_master
+			div.container-fluid
+				div.navbar-header
+					button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+						span.sr-only Toggle navigation
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+					a.navbar-brand.hidden-md.hidden-lg(href='#') 臺大種子創業競賽
+
+						//- img(src='seed/images/logo.png' style='max-width:300px;')
+				div#navbar.navbar-collapse.collapse
+
+					ul.nav.navbar-nav
+						img.hidden-xs.hidden-sm#img_logo(src='seed/images/logo.png' style='height: 110px;' itemprop='image')
+					ul.nav.navbar-nav.navbar-right
+						li#news.active
+							a(href='#') 最新消息
+						li#spirit
+							a(href='#') 活動介紹
+						li#flow
+							a(href='#') 活動時程
+						li.dropdown#procedure
+							a.dropdown-toggle(href='#' data-toggle="dropdown" role="button" aria-expanded="false") 競賽辦法
+								span.caret
+									ul.dropdown-menu(role="menu")
+										li#stageFst
+											a(href='#' style='margin: 5% 5% 0 0;') 第一階段：初選審查
+										li#stageSnd
+											a(href='#' style='margin: 5% 0 5% 0;') 第二階段，五分鐘種子競賽！
+						li#qna
+							a(href='#') Q & A
+						li#apply
+							img#img_apply_btn(src="images/apply.png"  style="width:130px; margin:30px 30px 0 0;")
+							//- button.btn.rec_btn.s.hidden-xs.hidden-sm
+								span(style='margin-right: 20px;')
+									img(src='seed/images/plus_symbol.png' style='width: auto; margin-top: -4px;')
+								| 馬上報名
+							//- a.hidden-md.hidden-lg(href='#') 線上報名
+
+
+		div.container-fluid.grey_bg#div_news
+			include ./news.jade
+		div.div_hide#div_spirit
+			div.row.extra-padding
+				h1 活動介紹
+			div.row
+				div.col-md-6.col-xs-12.col-ms-12
+					div.row
+						h1 臺大種子創業競賽
+					div.row.content.text-align-center
+						p
+							| 為推動臺大校園創業風氣，營造校園創業環境
+							| 並鼓勵有創業構想之團隊動手實作
+							| 發揮創新、專注、改變社會之影響力
+							| 臺大創創中心特舉辦種子創業競賽
+							| 提供新創團隊驗證其創業構想之獎勵金
+				div.col-md-6.col-xs-12.col-ms-12.left-border
+					div.row
+						h1 參賽資格
+					div.row.content.text-align-center
+						p
+							| 尚未成立公司之團隊
+							| 團隊須至少一位核心成員為臺大師生或校友
+							| 創業概念必須為長期性事業
+							| 而非單次的專案、計畫或活動
+				div.row.extra-padding
+		div.div_hide.grey_bg#div_flow
+			div.row.extra-padding
+				h1 活動時程
+			div.row(style='padding: 0; margin: 0;')
+				include ./flows.jade
+			div.row.extra-padding
+			//- img(src='seed/images/flow.png' style='width: 85%;')
+		div.container-fluid#div_procedure
+			div.row.extra-padding
+				h1 競賽辦法
+			div.row
+				div.col-md-1.hidden-xs.hidden-sm
+				div.col-md-10
+					div.row.stage#div_stageFst
+						h2 第一階段：初選審查
+						h4 線上填寫報名表，並提交「創業計畫說明書」，評審將挑選 30 隊進入決選
+					div.row.grey_bg.text-align-center.inner-padding
+						div.col-md-7
+							h2 創業計畫說明書需包括：
+							img(src='seed/images/proposal.png' style='width: 100%;')
+							p(style="text-align: right; padding-right:5%; color: #666666;")
+								| 創業概念說明書最多十頁為限
+						div.col-md-5
+							h2 評選標準：
+							img(src='seed/images/standard.png' style='width: 100%;')
+							
+							
+
+				div.col-md-1.hidden-xs.hidden-sm
+			div.row.extra-padding
+			
+			div.row
+				div.col-md-1.hidden-xs.hidden-sm
+				div.col-md-10
+					div.row.stage.second#div_stageSnd
+						h2 第二階段，五分鐘種子競賽！
+						h4 當你一上台，便會開始倒數五分鐘，時間到消音下台。請在五分鐘內闡述你的理念計畫，說服評審贏得獎金！
+					//- div.row.grey_bg.content.text-align-center
+					div.row.grey_bg.content.text-align-center
+						div.row(style="padding:0 4% 0 4%;")
+							div.col-md-6(style="padding:0;")
+								img(src="images/1X3A9338.jpg" width="100%")
+							div.col-md-6(style="padding:0;")
+								img(src="images/1X3A9413.jpg" width="100%")
+						div.row(style="font-size:100%; text-align: left; line-height: 150%; color:#999999; padding:0;")
+							div.col-md-2
+							div.col-md-4
+								p
+									| 競賽時間：10/30(五) 13:00 - 17:00
+									| 每隊上台五分鐘，發表創業構想及計畫
+									| 競賽地點：張榮發基金會11F國際會議中心
+									| (捷運臺大醫院站步行5分鐘）
+							div.col-md-6
+								p
+									| 獎金：獲獎隊伍每隊新台幣 50 萬元，總獎金 750 萬元
+									| 獎金發放方式：依照「第二屆臺大種子創業競賽辦法」
+						div.row(style="font-size:100%; text-align: left; line-height: 150%; color:#999999; padding:0;")
+							div.col-md-2
+							div.col-md-10
+								p
+									| ＊評審小組與主辦單位得視競賽情形作成從缺、或獎金增額之決議。
+									| ＊主辦單位保有修改、終止、變更活動內容細節之權利，且不另行通知。
+
+
+						//- div.col-md-6
+							h2 競賽規則
+							br
+							p
+								| 5/8 (五) 14:00 ~ 18:00
+								| 每組上台五分鐘，時間一到消音下台
+								| 請說服評審給你 50 萬創業基金
+								| 驗證你的想法！
+						//- div.col-md-6.left-border
+							h2 獎金：新台幣 
+								span(style='color: #EB623F;') 50 萬元
+							h2 （ 總獎金 750 萬元 ）
+							h5(style='color: #999999;') 
+								| *評審小組與主辦單位得視競賽情形作成從缺、或獎金增額之決議。
+								| 主辦單位保有修改、終止、變更活動內容細節之權利，且不另行通知。
+							br
+							h2 獎金發放方式
+							h4 依照鑽石種子基金管理辦法發放
+				div.col-md-1.hidden-xs.hidden-sm
+			div.row.extra-padding
+				
+		div.container-fluid.grey_bg#div_apply
+			div.row.extra-padding
+				h1 線上報名
+			div.row
+				div.col-md-1.hidden-xs.hidden-sm
+				div.col-md-10.white_bg(style='padding: 0;')
+					div.grey_border.inner-padding#apply_done
+						h3 報名完成!
+					div.grey_border.inner-padding#apply_ing
+						include ./applyForm.jade
+				div.col-md-1.hidden-xs.hidden-sm
+			div.row.extra-padding
+
+		div.div_hide.container-fluid#div_qna
+			div.row.extra-padding
+				h1 Q & A
+			div.row3
+				div.col-md-1.hidden-xs
+				div.col-md-10.col-xs-12.grey_border.qna-body
+					include ./qna.jade
+				div.col-md-1.hidden-xs
+			div.row.extra-padding
+
+		div.div_hide.container-fluid#footer1
+			div.col-md-4.col-xs-12(style='padding-bottom:5%;')#link_menu
+				p(style='color: #999999;') 選單
+				hr(style='border-color: #DDDDDD;')
+				div.col-md-6.col-xs-6(style='padding: 0;')
+					a#a_top(href='#') 首頁
+					br
+					a#a_spirit(href='#') 最新消息
+					br
+					a#a_flow(href='#') 活動介紹
+					br
+					a#a_apply(href='#') 活動時程
+				div.col-md-6.col-xs-6(style='padding: 0;')
+					br
+					a#procedure(href='#') 競賽辦法
+					br
+					a#a_stageFst(href='#') FAQ
+					br
+					a#a_stageSnd(href='#') 花絮
+
+			div.col-md-4.col-xs-12(style='padding-bottom:5%;')
+				p(style='color: #999999;') 關於臺大創創中心
+				hr(style='border-color: #DDDDDD;')
+				p 臺大創意創業中心於 2014 年底成立，旨在打造臺大創業生態系，以啟發創業種子、實踐創業構想、整合校內外創業資源，並提供共同工作空間、資金、人脈、專業諮詢及各式活動。歡迎新創團隊加入，加速事業轉化起飛！
+
+			div.col-md-4.col-xs-12(style='padding-bottom:5%;')
+				p(style='color: #999999;' itemprop='name') 臺大種子創業競賽
+				hr(style='border-color: #DDDDDD;')
+				p(itemprop='description')
+					| 第一階段初選：線上報名，繳交創業企劃說明書
+					br
+					| 收件時間：9/21(一) 00:00 - 9/30(三) 23:59
+					br
+					| 第二階段決選：上台提報，5分鐘說明創業概念
+					br
+					| 決選時間：10/30(五) 13:00-17:00
+					br
+					| 總獎金：750萬元
+
+				button.btn.rec_btn.xs#btn_apply
+					span(style='margin-right: 20px;')
+						img(src='seed/images/plus_symbol_red.png' style='margin-top: -4px;')
+					| 馬上報名
+
+		span(itemprop="location" itemscope itemtype="http://schema.org/Place") 
+			meta(itemprop="name" content="Taiwan")
+		meta(itemprop="url" content="http://tec.ntu.edu.tw/") 
+		meta(itemprop="startDate" content="2015-03-23")
+
+	div.div_hide.container-fluid#footer2
+		div.row
+			div.col-md-1.hidden-xs
+			div.vcenter.col-md-2.col-xs-12
+				img(src='seed/images/footer-logo-01.png')
+			div.vcenter.col-md-4.col-xs-12(style='vertical-align: bottom;')
+				div(style='display: inline-block; clear:both;')
+					p 臺大創意創業中心 Taidah Entreprenuership Center
+						| 100 台北市中正區思源街 18 號 台大水源校區思源樓 4 樓
+						| 02 - 3366 - 1739
+					div(style='margin-top: -7px')
+						p(style='float: left;') ntutec@ntu.edu.tw	
+						p(style='float: right; color: #777777; font-size: 80%;') Copyright © 2015 臺大創創中心版權所有
+
+				//- span.glyphicon.glyphicon-earphone(aria-hidden="true")
+				//- | &nbsp;&nbsp; 02-33661573
+			div.vcenter.col-md-4.col-xs-12
+				img(src='seed/images/footer-logo-02.png' style='padding: 0 5% 5% 0;')
+				img(src='seed/images/footer-logo-03.png' style='padding: 0 5% 5% 0;')
+				img(src='seed/images/footer-logo-04.png' style='padding: 0 5% 5% 0;')
+
+
+
+
