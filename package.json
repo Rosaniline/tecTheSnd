@@ -13,6 +13,7 @@
     "decache": "^3.0.3",
     "express": "~4.13.1",
     "google-spreadsheet": "^1.0.1",
+    "google-spreadsheet-append": "0.0.4",
     "jade": "~1.11.0",
     "morgan": "~1.6.1",
     "multer": "^1.0.3",
