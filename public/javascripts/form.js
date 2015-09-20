@@ -48,7 +48,6 @@ $(document).ready(function(){
 			$('#ss-form').ajaxSubmit({
 
 	            error: function(xhr) {
-					status('Error: ' + xhr.status);
 					console.log('error');
 	            },
 
