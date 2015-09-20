@@ -8,14 +8,12 @@ $(document).ready(function(){
 		if ( $(this).hasClass('active') ) {
 			$(this).removeClass('active');
 			$(this).find('img').attr('src', 'seed/images/plus_symbol_grey.png');
-			// console.log($(this).find('img').attr('src'));
 		}
 
 		else {
 			$('.panel-div').removeClass('active');
 			$('.panel-div').find('img').attr('src', 'seed/images/plus_symbol_grey.png');
 			$(this).addClass('active');
-			console.log($(this).find('img').attr('src'));
 			$(this).find('img').attr('src', 'seed/images/minus_symbol_grey.png');
 		}				
 
@@ -30,13 +28,13 @@ $(document).ready(function(){
 
 	});
 
-	$("#img_apply_btn").css({
+	$("#img_apply_btn, #img_logo").css({
 		"cursor": "pointer"
 	})
 
-	$("#img_logo").css({
-		"cursor": "pointer"
-	})
+	// $("#img_logo").css({
+	// 	"cursor": "pointer"
+	// })
 
 	$('.banner_slider').bxSlider({
 		slideWidth: window.width,
@@ -64,53 +62,9 @@ $(document).ready(function(){
 
 	});
 
-	$(document).on("click", "#btn_more", function(e){
-
-		// Prevent a page reload when a link is pressed
-		e.preventDefault(); 
-
-		$("html, body").animate({
-
-			scrollTop: $("#div_spirit").offset().top - 50
-
-		}, 500);
-
-	});
-
-	if ( beforeApply() || afterApply() ) {
-		$('#div_apply').css('display', 'inline');
-		// $('#apply_done').css('display', 'none');
-	}
 
 
-	$(document).on("click", "#img_apply_btn, #btn_apply", function(e){
 
-		// Prevent a page reload when a link is pressed
-		e.preventDefault(); 
-
-		if ( beforeApply() ) {	
-
-			bootbox.alert("第二屆臺大種子創業競賽將於 9/21(一) - 9/30(三) 開放系統報名！");
-		}
-
-		else if (afterApply()) {
-
-			bootbox.alert("第二屆臺大種子創業競賽已截止報名。歡迎於 10/30(五) 前來決選觀賽！");
-			
-		}
-
-		else {
-
-			$("html, body").animate({
-
-				scrollTop: $("#div_apply").offset().top - 50
-
-			}, 500);
-		}
-
-		
-
-	});
 
 	$(document).on("click", "#footer1 #link_menu a", function(e){
 
@@ -182,7 +136,6 @@ $(document).ready(function(){
 
     $('.btn-file').on('change', function(event, numFiles, label) {
 
-
     	var elem = document.getElementById("file_text");
     	elem.value = "";
     	var fileName = $("input:file").val().split('/').pop().split('\\').pop();
@@ -191,10 +144,11 @@ $(document).ready(function(){
         
     });
 
-	$('#ss-form').submit(function(event) {
-	    event.preventDefault();
-		    $(this).submit();
-    });
+
+
+	
+
+
 
 
 });
@@ -229,24 +183,7 @@ function alignNavbar(scroll) {
 
 }
 
-function beforeApply() {
 
-	var s = new Date(2015, 8, 21, 0, 0, 0, 0); 
-	var d = new Date();
-	
-	return s > d;
-
-}
-
-function afterApply() {
-
-	var t = new Date(2015, 9, 1, 0, 0, 0, 0); 
-	var d = new Date(); 
-	
-	console.log(d);
-	return d > t;
-
-}
 
 
 
