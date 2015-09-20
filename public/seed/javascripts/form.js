@@ -67,7 +67,7 @@ $(document).ready(function(){
 
 function beforeApply() {
 
-	var s = new Date(2015, 8, 20, 0, 0, 0, 0); 
+	var s = new Date(2015, 8, 21, 0, 0, 0, 0); 
 	var d = new Date();
 	
 	return s > d;
@@ -88,13 +88,10 @@ function formValidation() {
 	val = true;
 
 	$('#ss-form input').each(function() {
-		// console.log($(this).val());
 		if($(this).val() == "") {
 			val = false;
 		} 
 	});
-
-	// console.log(val);
 
 	return val;
 }
