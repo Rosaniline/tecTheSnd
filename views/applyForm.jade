@@ -44,29 +44,29 @@ form.form-horizontal#ss-form(action='/upload', method='POST', enctype='multipart
 			.col-md-9
 				.row
 					.col-md-3.col-xs-6
-						a.btn.square(target="_blank" href="/attachment/01_comp_rules.pdf")
-							img(src='images/PDFicon.png')
+						a.btn.square(target="_blank" href="https://drive.google.com/open?id=0B9yjqHZxgz58S3F0WWZpczYySm8")
+							img(src='seed/images/PDFicon.png')
 							br
 							label.control-label 臺大種子創業競賽
 							br
 							| 報名須知
 					.col-md-3.col-xs-6
-						a.btn.square(target="_blank" href="/attachment/02_affidavit.pdf")
-							img(src='images/PDFicon.png')
+						a.btn.square(target="_blank" href="https://drive.google.com/open?id=0B9yjqHZxgz58V3ltQXZlSVNmXzQ")
+							img(src='seed/images/PDFicon.png')
 							br
 							label.control-label 臺大鑽石種子基金
 							br
 							| 切結書
 					.col-md-3.col-xs-6
-						a.btn.square(target="_blank" href="/attachment/03_equity_agreement.pdf")
-							img(src='images/PDFicon.png')
+						a.btn.square(target="_blank" href="https://drive.google.com/open?id=0B9yjqHZxgz58OU9MbmlxX3RaRnc")
+							img(src='seed/images/PDFicon.png')
 							br
 							label.control-label 臺大鑽石
 							br
 							| 股權同意書
 					div.col-md-3.col-xs-6(style='color: #EB6141;')
-						a.btn.square(target="_blank" href='/attachment/04_comp_table.doc')
-							img(src='images/download_icon.png')
+						a.btn.square(target="_blank" href='https://drive.google.com/open?id=0B9yjqHZxgz58WkYyc21lWFJWR1U')
+							img(src='seed/images/download_icon.png')
 							br
 							label.control-label 臺大種子創業競賽
 							br
@@ -76,104 +76,22 @@ form.form-horizontal#ss-form(action='/upload', method='POST', enctype='multipart
 			.col-md-2
 			.col-md-9
 				.input-group
-					span.input-group-addon.btn.s.btn-file
-						// span(style='margin-right: 20px;')
-						| 報名表格上傳
+					//- span.input-group-btn
+					span.input-group-addon.btn.s.btn-file 報名表格上傳
 						input(type="file" name="attach_file")
 					input#file_text.form-control
 	.row
 		.form-group
 			.col-md-2
 			.col-md-9
-				//- input(type='submit', value='Upload Image')
-				button.btn.rec_btn.s(style='width: 100%; margin: 0;' type='submit' name='submit')
+				button.btn.rec_btn.s#ss_submit(style='width: 100%; margin: 0;' type='submit' name='submit')
 					span(style='margin-right: 20px;')
-						img(src='images/plus_symbol.png' style='width: auto; margin-top: -4px;')
+						img(src='seed/images/plus_symbol.png' style='width: auto; margin-top: -4px;')
 					| 報名
 
 
-//- form.form-horizontal#ss-form(action='https://docs.google.com/forms/d/1ynJR7-JrASi2TLGWR9BuFFHXuHX0juB5M1WMAkFGbyg/formResponse' method='POST' target='_self' onsubmit='')
-	div.row
-		div.form-group
-			div.col-md-2
-				label.control-label(for='entry_1129696838') 團隊名稱
-			div.col-md-6
-				input.form-control#entry_1129696838(name='entry.1129696838')
-	div.row
-		div.form-group
-			div.col-md-2
-				label.control-label(for='entry_1566565934') 聯絡人
-			div.col-md-4
-				input.form-control#entry_1566565934(name='entry.1566565934')
-		div.form-group
-			div.col-md-2
-				label.control-label(for='entry_1456414545') 手機
-			div.col-md-4
-				input.form-control#entry_1456414545(name='entry.1456414545')
-		div.form-group
-			div.col-md-2
-				label.control-label(for='entry_992933071') 電子信箱
-			div.col-md-4
-				input.form-control#entry_992933071(name='entry.992933071')
-		div.form-group
-			div.col-md-2
-				label.control-label(for='entry_1614776015') 概念名稱
-			div.col-md-4
-				input.form-control#entry_1614776015(name='entry.1614776015')
-		div.form-group
-			div.col-md-2
-				label.control-label(for='entry_1223507669') 產業
-			div.col-md-4
-				input.form-control#entry_1223507669(name='entry.1223507669')
-	div.row
-		div.form-group
-			div.col-md-2
-			div.col-md-9
-				div.row
-					div.col-md-3.col-xs-6
-						a.btn.square(target="_blank" href="/attachment/01_comp_rules.pdf")
-							img(src='images/PDFicon.png')
-							br
-							label.control-label 臺大種子創業競賽
-							br
-							| 報名須知
-					div.col-md-3.col-xs-6
-						a.btn.square(target="_blank" href="/attachment/02_affidavit.pdf")
-							img(src='images/PDFicon.png')
-							br
-							label.control-label 臺大鑽石種子基金
-							br
-							| 切結書
-					div.col-md-3.col-xs-6
-						a.btn.square(target="_blank" href="/attachment/03_equity_agreement.pdf")
-							img(src='images/PDFicon.png')
-							br
-							label.control-label 臺大鑽石
-							br
-							| 股權同意書
-					div.col-md-3.col-xs-6(style='color: #EB6141;')
-						a.btn.square(target="_blank" href='/attachment/04_comp_table.doc')
-							img(src='images/download_icon.png')
-							br
-							label.control-label 臺大種子創業競賽
-							br
-							| 報名表格
-	div.row					
-		div.col-md-2
-		div.col-md-9
-			form#uploadForm(enctype="multipart/form-data" action="/upload" method="POST")
-				div.input-group
-					span.input-group-addon.btn.s.btn-file
-						// span(style='margin-right: 20px;')
-						| 報名表格上傳
-						input(type="file" name="attach_file")
-					input#file_text.form-control
 
-	div.row
-		div.col-md-2
-		div.col-md-9
-			div.form-group
-				button.btn.rec_btn.s#ss-submit(style='width: 100%; margin: 0;' type='submit' name='submit')
-					span(style='margin-right: 20px;')
-						img(src='images/plus_symbol.png' style='width: auto; margin-top: -4px;')
-					| 報名
+
+
+
+

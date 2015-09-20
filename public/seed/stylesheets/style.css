@@ -150,6 +150,25 @@ p {
 	font-size: 100%;
 }
 
+.btn-file {
+	position: relative;
+	overflow: hidden;
+}
+.btn-file input[type=file] {
+	position: absolute;
+	top: 0;
+	right: 0;
+	min-width: 100%;
+	min-height: 100%;
+	font-size: 100px;
+	text-align: right;
+	filter: alpha(opacity=0);
+	opacity: 0;
+	background: red;
+	cursor: inherit;
+	display: block;
+}
+
 .grey_bg {
 	background-color: #f4f1f1;
 }
@@ -249,14 +268,14 @@ p {
 #banner_fst {
 	height: 100vh;
 	text-align: center;
-	background-image: url('/images/banner1_bg.png');
+	background-image: url('/seed/images/banner1_bg.png');
 	background-repeat: repeat;
 }
 
 #banner_snd {
 	height: 100vh;
 	text-align: center;
-	background-image: url('/images/banner2_bg.png');
+	background-image: url('/seed/images/banner2_bg.png');
 	background-repeat: repeat;
 }
 
@@ -380,7 +399,7 @@ h2 {
 
 	text-align: center;
 	color: #CCCCCC;
-	display: none;'
+	display: none;
 }
 
 

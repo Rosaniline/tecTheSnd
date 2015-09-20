@@ -78,8 +78,8 @@ $(document).ready(function(){
 	});
 
 	if ( beforeApply() || afterApply() ) {
-		$('#div_apply').css('display', 'none');
-		$('#apply_done').css('display', 'navone');
+		$('#div_apply').css('display', 'inline');
+		// $('#apply_done').css('display', 'none');
 	}
 
 

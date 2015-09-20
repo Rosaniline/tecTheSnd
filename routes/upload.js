@@ -12,7 +12,17 @@ var storage = multer.diskStorage({
   },
   filename: function (req, file, cb) {
 
-    var filename = path.parse(file.originalname).name;
+    // for (var key in req.body){
+    // //   if (req.body.hasOwnProperty(key)) {
+    //     console.log(key + ", " + req.body[key]);
+    // //   }
+    // }
+
+    // console.log(req.body);
+
+
+
+    var filename = req.body['team'];// path.parse(file.originalname).name;
     var ext = path.extname(file.originalname);
     var parent_dir = path.dirname(module.parent.filename);
     f_path = path.join(parent_dir, 'uploads', filename + ext);
@@ -33,7 +43,8 @@ var storage = multer.diskStorage({
 var upload = multer({ storage: storage });
 
 router.post('/', upload.single('attach_file'), function (req, res, next) {
-	console.log(Object.keys(req.body));
+	
+  res.end('file uploaded.');
 
 });
 
