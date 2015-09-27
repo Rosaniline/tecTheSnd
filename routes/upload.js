@@ -14,7 +14,8 @@ var storage = multer.diskStorage({
   filename: function (req, file, cb) {
 
     var form = req.body;
-    var timestamp = new Date();
+    // Offsetting the timezone on AWS
+    var timestamp = new Date(Date.now().valueOf() + 28800000);
 
     var gsheet = new GoogleSpreadsheet('1gcs4oF9bbF1W1DGJ9RfJjdKqbnsbv0Fnko7zsSYTKfc');
     var creds = require('./tecapply-e4ea57d63d5e.json');
