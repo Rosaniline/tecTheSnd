@@ -3,6 +3,7 @@ var fs = require('fs');
 var path = require('path');
 var express = require('express');
 var GoogleSpreadsheet = require("google-spreadsheet");
+
 var router = express.Router();
 
 
@@ -32,7 +33,13 @@ var storage = multer.diskStorage({
           "電子信箱": form['mail'],
           "概念名稱": form['idea'],
           "產業": form['industry']
-        }, function(){
+        }, function(err){
+          if (err) {
+            console.log('The Google-Spreadsheet returned an error: ' + err);
+            console.log('while adding row: %s ');
+
+          }       
+
           console.log("updated.");
         });
       });
@@ -50,6 +57,7 @@ var storage = multer.diskStorage({
     }
 
     filename = count == 0 ? filename : filename + '_' + count; 
+    uploaded_filename = path.join('uploads', filename + ext);
 
     cb(null, filename + ext);
     
