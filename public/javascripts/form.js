@@ -75,7 +75,7 @@ function beforeApply() {
 
 function afterApply() {
 
-	var t = new Date(2015, 9, 10, 12, 0, 0, 0); 
+	var t = new Date(2015, 9, 7, 12, 0, 0, 0); 
 	var d = new Date(); 
 	
 	return d > t;
