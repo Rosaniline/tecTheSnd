@@ -1,0 +1,27 @@
+
+-
+	sponsors = {
+		'tec': 'http://tec.ntu.edu.tw/',
+		'CEP': 'http://www.cep.ntu.edu.tw/',
+		'NTUEA': 'http://ntuea.ntu.edu.tw/ntuea/index.php/news',
+		'diamond': '#',
+		'accupass': 'http://www.accupass.com/',
+		'meet': 'http://www.meetclub.tw/',
+		'bn': 'http://www.bnext.com.tw/',
+		'punnode': 'http://punnode.com/',
+		'epoch': 'http://www.epoch.org.tw/',
+		'garage+': 'http://www.garageplus.asia/ ',
+		'venturelab': 'https://www.facebook.com/venture.lab.88',
+		'startupHub': 'https://www.facebook.com/StartUpTaiwan?fref=ts',
+		'NAYE': 'http://www.careernet.org.tw/'
+	}
+
+div.row
+	div.col-md-12.vcenter
+		- for(i in sponsors)
+			if sponsors[i] != '#'
+				a(href=''+ sponsors[i] +'' target='_blank')
+					img(src='seed/images/fwlogo/' + i +'.png')
+			else
+				img(src='seed/images/fwlogo/' + i +'.png')
+		

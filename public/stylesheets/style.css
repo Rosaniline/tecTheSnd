@@ -20,6 +20,13 @@
 
 		opacity: 1;
 	}
+
+	#div_sponsor img{
+
+		height: 70px;
+		margin-bottom: 10px;
+		padding: 0 15px 0 15px;
+	}
 }
 
 @media screen and (min-width: 970px) {
@@ -52,6 +59,13 @@
 	.circle .des {
 
 		opacity: 0;
+	}
+
+	#div_sponsor img{
+
+		height: 90px;
+		margin-bottom: 30px;
+		padding: 0 25px 0 25px;
 	}
 }
 
@@ -433,6 +447,17 @@ h2 {
 	padding: 0;
 	font-weight: bold;
 
+}
+
+#div_sponsor {
+	text-align: center;
+}
+
+
+#div_sponsor img{
+
+	/*height: 100px;*/
+	
 }
 
 
